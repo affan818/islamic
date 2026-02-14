@@ -1,9 +1,31 @@
 @import "tailwindcss";
 
+/* Theme tokens */
 @theme {
   --color-brand-primary: #057855;
   --color-brand-secondary: #c3a670;
   --color-brand-butter: #f4ede1;
   --color-brand-light: #f9f5f1;
   --color-brand-softGreen: #f0f5f1;
+}
+
+/* Font utilities */
+@layer base {
+  :root {
+    --font-body: var(--font-body);
+    --font-heading: var(--font-heading);
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
 }

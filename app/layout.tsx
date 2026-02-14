@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// Basic metadata for SEO (can expand later)
+import { Poppins, Roboto_Serif } from "next/font/google";
+
+// Body font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+// Heading font
+const robotoSerif = Roboto_Serif({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Islam | Islamic Web App",
-  description:
-    "An Islamic web application providing authentic knowledge and resources.",
+  description: "Authentic Islamic knowledge platform.",
 };
 
 export default function RootLayout({
@@ -15,7 +31,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900 antialiased">{children}</body>
+      <body
+        className={`${poppins.variable} ${robotoSerif.variable} font-body bg-brand-light text-gray-900 antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
