@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { Poppins, Roboto_Serif } from "next/font/google";
+import Navbar from "@/components/layout/Navbar";
 
 // Body font
 const poppins = Poppins({
@@ -34,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${robotoSerif.variable} font-body bg-brand-light text-gray-900 antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

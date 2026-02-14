@@ -29,3 +29,13 @@
     font-family: var(--font-heading);
   }
 }
+
+/* Hide horizontal scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
