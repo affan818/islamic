@@ -15,7 +15,7 @@ export default function BottomNav() {
   const [activeItem, setActiveItem] = useState("Ask a Scholar");
 
   return (
-    <nav className="h-[80px] bg-brand-light border-b border-gray-200">
+    <nav className="h-[80px] bg-white border-b border-gray-200">
       {/* Scroll wrapper */}
       <div className="flex h-full items-center overflow-x-auto scrollbar-hide">
         {/* Inner content*/}

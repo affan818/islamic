@@ -28,7 +28,7 @@ export default function TopBar() {
 
   return (
     <>
-      <div className="h-[120px] bg-brand-light border-b border-gray-200">
+      <div className="h-[120px] bg-white border-b border-gray-200">
         <Container className="flex h-full items-center justify-between">
           {/* Toggle */}
           <button

@@ -39,3 +39,37 @@
   -ms-overflow-style: none; /* IE & Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.library-ans-criticism {
+  /* Group */
+  position: absolute;
+  height: 21.65px;
+  left: 0%;
+  right: 0%;
+  top: calc(50% - 21.65px / 2 - 0px);
+}
+
+.quran-section {
+  width: 1008;
+  height: 20;
+  opacity: 1;
+  gap: 10px;
+}
+
+.quran-section-vectors {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+
+.quran-section-vector-image {
+  width: 16.67px;
+  height: 15.89px;
+  opacity: 1;
+  top: 1.67px;
+  left: 1.67px;
+  border-width: 1.67px;
+}

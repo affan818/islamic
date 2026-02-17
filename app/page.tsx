@@ -1,12 +1,9 @@
-import HeroSection from "@/components/home/HeroSection";
-import LibrarySection from "@/components/home/LibrarySection";
-import Container from "@/components/shared/Container";
+import Home from "@/components/home/Home";
 
-export default function HomePage() {
+export default function HomePageComponent() {
   return (
     <main>
-      <HeroSection />
-      <LibrarySection />
+      <Home />
     </main>
   );
 }
