@@ -40,7 +40,24 @@ export default function VoicesFaith() {
   const [activeIndex, setActiveIndex] = useState(2);
 
   return (
-    <section className="bg-brand-light px-6 py-28 md:px-16">
+    <section className="relative overflow-hidden px-6 py-28 md:px-16">
+      {/* Background Image Fade */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* Top Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/bg.png"
+            alt=""
+            fill
+            priority
+            className="object-cover opacity-40"
+          />
+        </div>
+
+        {/* Fade Overlay (Image → Butter) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F4EDE1]/200 to-[#F9F5F1]" />
+      </div>
+
       {/* Heading */}
       <div className="mb-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
@@ -105,16 +122,43 @@ export default function VoicesFaith() {
       </div>
 
       {/* Podcast Buttons */}
-      <div className="mt-20 flex flex-wrap justify-center gap-6">
-        <button className="rounded-full bg-white px-6 py-3 text-sm shadow">
-          Listen on Google Podcasts
-        </button>
-        <button className="rounded-full bg-white px-6 py-3 text-sm shadow">
-          Apple Podcasts
-        </button>
-        <button className="rounded-full bg-white px-6 py-3 text-sm shadow">
-          Listen on Spotify
-        </button>
+      <div className="mt-20 flex flex-wrap items-center justify-center gap-10">
+        {/* Google Podcast */}
+        <div className="rounded-full bg-white px-6 py-3 shadow">
+          <a href="#" className="relative block w-[160px] h-[48px]">
+            <Image
+              src="/images/google-podcast.png"
+              alt="Google Podcasts"
+              fill
+              className="object-contain"
+            />
+          </a>
+        </div>
+
+        {/* Apple Podcast */}
+        <div className="rounded-full bg-white px-6 py-3 shadow">
+          <a href="#" className="relative block w-[160px] h-[48px]">
+            <Image
+              src="/images/apple-podcast.png"
+              alt="Apple Podcasts"
+              fill
+              className="object-contain"
+            />
+          </a>
+        </div>
+
+        {/* Spotify */}
+        <div className="rounded-full bg-white px-6 py-3 shadow">
+          {" "}
+          <a href="#" className="relative block w-[160px] h-[48px]">
+            <Image
+              src="/images/spotify.png"
+              alt="Spotify"
+              fill
+              className="object-contain"
+            />
+          </a>
+        </div>
       </div>
     </section>
   );

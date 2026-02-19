@@ -5,6 +5,8 @@ import gsap from "gsap";
 import Container from "@/components/shared/Container";
 import Sidebar from "./Sidebar";
 import CountryDropdown from "./CountryDropdown";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function TopBar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -49,9 +51,15 @@ export default function TopBar() {
           </button>
 
           {/* Logo */}
-          <div className="text-3xl font-heading text-brand-primary">
-            Islamic
-          </div>
+          <Link href="/" className="relative block md:w-[80px] md:h-[40px]">
+            <Image
+              src="/images/demo-logo.png"
+              alt="Islam Logo"
+              fill
+              priority
+              className="object-contain"
+            />
+          </Link>
 
           <div className="flex items-center gap-4">
             <CountryDropdown />
